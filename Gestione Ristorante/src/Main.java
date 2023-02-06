@@ -14,8 +14,8 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//int totale=0;
-		int j;
+		
+		int cod;
 		int prez=0;
 		char ch=0;
 		String nome="";
@@ -31,25 +31,27 @@ public class Main {
 		
 		 System.out.println("Benvenuto!");
 		 System.out.println("Digita b per visulizzare le bevande oppure p per visualizzare i piatti. Digita x per uscire:");
- for(int i=0;i <Tavoli.length;i++) {
-		 do{
-			 try {
-		   System.out.print("Piatti(p),Bevande(b), Exit(x): ");
-		   Scanner q = new Scanner(System.in);
-			ch=q.nextLine().charAt(0);
-			   if(ch=='p')menu.mostraP();
-			   else if(ch=='b')menu.mostraB();
-			   else break;
+                 for(int i=0;i <Tavoli.length;i++) {
+		   do{
+			   try {
+				   System.out.print("Piatti(p),Bevande(b), Exit(x): ");
+				   Scanner scan = new Scanner(System.in);
+				   ch=scan.nextLine().charAt(0);
+				   if(ch=='p')
+					   menu.mostraP();
+				   else if(ch=='b')
+					   menu.mostraB();
+				   else break;
 			   System.out.print("Inserire codice prodotto:");
-			   j=q.nextInt();
+			   cod=scan.nextInt();
 		
 		   if(ch=='p'||ch=='b'){
 		   if(ch=='p'){
-		      nome=menu.getP(j).getNom();
-		      prez=menu.getP(j).getPrz();
-		      descrz=menu.getP(j).getDescrz();
+		      nome=menu.getP(cod).getNom();
+		      prez=menu.getP(cod).getPrz();
+		      descrz=menu.getP(cod).getDescrz();
 		   } else {
-		      nome=menu.getB(j).getNom();prez=menu.getB(j).getPrz();descrz=menu.getB(j).getDescrz();
+		      nome=menu.getB(cod).getNom();prez=menu.getB(cod).getPrz();descrz=menu.getB(cod).getDescrz();
 		      }
 		   } 
 			 }catch (ArrayIndexOutOfBoundsException errore) {
@@ -61,11 +63,12 @@ public class Main {
 		System.out.println(Tavoli[i].toString());
 		
 		}while(ch!='x');
-	//System.out.println(totale);
+	
 	}
  }
 }
-
+//int totale=0;
+//System.out.println(totale);
 
 
 /*int inc;
