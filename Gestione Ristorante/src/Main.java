@@ -1,11 +1,3 @@
-/*Gestioni ordinazioni ristorante. 
- * Creare Array e Classe contenente il seguente record logico:
- * Menù { CodPort, Descrizione, Tipo, Prezzo}
- * 
- * Le ordinazioni verranno gestite con un Array del seguente record logico:
- * Rec_Tavola {CodTav, CodPort, Quantità, Descrizione, Prezzo, Progress};
- * A fine giornata determinare l’incasso della giornata e quello totale di ogni tavolo e azzerare infine l’Array**/
-
 
 import java.util.Scanner;
 import java.util.ArrayList;
@@ -15,7 +7,7 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int cod;
+		int cod; //codice portata
 		int prez=0;
 		char ch=0;
 		String nome="";
@@ -67,11 +59,3 @@ public class Main {
 	}
  }
 }
-//int totale=0;
-//System.out.println(totale);
-
-
-/*int inc;
-int tmp=Tavoli[i].getSaldo();
-inc=tmp;
-totale= inc++;*/
