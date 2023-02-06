@@ -21,9 +21,9 @@ public class Menu {
 	    }
 	
 	
-	public Vivande getP(int j) {return Piatti[j];}
+	public Vivande getP(int cod) {return Piatti[cod];}
 	
-	public Vivande getB(int j) {return Bevande[j];}
+	public Vivande getB(int cod) {return Bevande[cod];}
 	
 	public void mostraP() {
 	for(int i=0;i < Piatti.length;i++)
